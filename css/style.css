@@ -1,0 +1,725 @@
+/* start global */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.first {
+    background-color: #000;
+    margin-bottom: 400px;
+}
+
+.row {
+    display: flex;
+}
+
+/* end global */
+/*start navbar */
+nav {
+    height: 0;
+    position: relative;
+    z-index: 2;
+}
+
+nav .list-1,
+nav .list-2 {
+    flex: 40%;
+    max-width: 40%;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 5px;
+    margin-right: 8px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 5px;
+    position: relative;
+}
+
+nav ul li a span:first-child::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #d63447;
+    border-left: 2px solid #d63447;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+}
+
+nav ul li a span:first-child::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #d63447;
+    border-right: 2px solid #d63447;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+}
+
+nav ul li a span:last-child::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid #d63447;
+    border-left: 2px solid #d63447;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+}
+
+nav ul li a span:last-child::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid #d63447;
+    border-right: 2px solid #d63447;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+}
+
+nav .list-1 {
+    text-align: right;
+}
+
+nav .list-2 {
+    text-align: left;
+}
+
+nav .logo {
+    flex: 20%;
+    max-width: 20%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav .logo h2 {
+    margin: 0;
+    text-transform: capitalize;
+}
+
+nav .logo span {
+    color: #d63447;
+}
+
+nav ul li a:hover span:first-child::before {
+    top: -10px;
+    left: -10px;
+    opacity: 1;
+}
+
+nav ul li a:hover span:first-child::after {
+    top: -10px;
+    right: -10px;
+    opacity: 1;
+}
+
+nav ul li a:hover span:last-child::before {
+    bottom: -10px;
+    left: -10px;
+    opacity: 1;
+}
+
+nav ul li a:hover span:last-child::after {
+    bottom: -10px;
+    right: -10px;
+    opacity: 1;
+}
+
+/*end navbar */
+/*start header*/
+.header {
+    background-image: url(../images/header.png);
+    background-size: cover;
+    background-position: center;
+    height: 680px;
+    position: relative;
+    z-index: 1;
+}
+
+.header .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7)
+}
+
+.header .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header .info h2 {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 90px;
+    margin: 0;
+}
+
+.header .info p {
+    text-transform: capitalize;
+    line-height: 1.6;
+    font-size: 40px;
+    text-align: center;
+    margin-top: -4px;
+}
+
+/*end header*/
+/*start portfolio*/
+.portfolio .box {
+    flex: 33.3333%;
+    max-width: 33.3333%;
+    padding: 0 15px;
+    height: auto;
+}
+
+.portfolio .box h2 {
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.portfolio .box:not(:first-of-type) {
+    padding-top: 66px;
+}
+
+.portfolio .box:not(:nth-of-type(2)) {
+    border-right: .5px solid #222;
+    border-left: .5px solid #222;
+}
+
+.portfolio .box .image-overlay {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.portfolio .box .image-overlay img {
+    width: 100%;
+}
+
+.portfolio .box .image-overlay .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+}
+
+.portfolio .box .image-overlay .overlay .info {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+}
+
+.portfolio .box .image-overlay .overlay h4 {
+    color: #222;
+}
+
+.portfolio .box .image-overlay .overlay span {
+    color: #d63447;
+}
+
+.portfolio .box .image-overlay:hover .overlay {
+    opacity: 1;
+}
+
+/*end portfolio*/
+/*start brands*/
+
+.brands .brand {
+    flex: 20%;
+    max-width: 20%;
+    border-left: .5px solid #222;
+    text-align: center;
+    border-top: .5px solid #222;
+    padding: 30px 10px;
+}
+
+.brands .brand:last-of-type {
+    border-right: .5px solid #222;
+}
+
+.brands .brand img {
+    width: 100%;
+}
+
+/*end brands*/
+
+/*start about me */
+.about {
+    margin-top: 130px;
+}
+
+.about .image {
+    flex: 66.6666%;
+    max-width: 66.6666%;
+    padding: 0 15px;
+    border-left: .5px solid #222;
+    position: relative;
+}
+
+.about .image::after {
+    content: '';
+    position: absolute;
+    bottom: -38px;
+    right: 54px;
+    width: 250px;
+    height: 250px;
+    z-index: -1;
+    background-image: url(../images/dotted_light.png);
+}
+
+.about .image img {
+    width: 85%;
+}
+
+.about .info {
+    flex: 33.3333;
+    max-width: 33.3333%;
+    padding: 0 15px;
+    border-left: .5px solid #222;
+    border-right: .5px solid #222;
+}
+
+.about .info h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.about .info p {
+    color: #ddd;
+    line-height: 1.7;
+    padding-right: 91px;
+    margin: 44px 0;
+}
+
+.about .info button {
+    background: none;
+    color: #fff;
+    padding: 16px 25px;
+    border: 1px solid #222;
+    border-radius: 51px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.about .info button:hover {
+    transform: scale(1.05);
+    color: #d63447;
+    border: 1px solid #d63447;
+}
+
+/*end about me */
+/*start services*/
+
+/*end services*/
+/*start my framwork*/
+.main-color {
+    color: #d63447;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.heading h2 {
+    text-transform: capitalize;
+    font-size: 32px;
+    margin: 15px;
+}
+
+.heading img {
+    width: 90px;
+}
+
+/*end my framwork*/
+/*start services*/
+.services {
+    margin: 50px 0 10px 0;
+}
+
+.services .item {
+    flex: 33.3333%;
+    max-width: 33.3333%;
+    border-left: .5px solid #222;
+}
+
+.services .item:last-of-type {
+    border-right: .5px solid #222;
+}
+
+.services .item .box {
+    padding: 0 101px 20px 35px;
+}
+
+.services .item .box img {
+    width: 45px;
+    height: 45px;
+}
+
+.services .item .box p {
+    color: #ddd;
+    line-height: 1.5;
+}
+
+/*end services*/
+/*start skills*/
+.skills {
+    margin: 70px 0 20px;
+}
+
+.skills .skill {
+    flex: 25%;
+    max-width: 25%;
+    text-align: center;
+    position: relative;
+    border-left: .5px solid #222;
+}
+
+.skills .skill:last-of-type {
+    border-right: .5px solid #222;
+}
+
+.skills .skill span:first-child {
+    font-size: 60px;
+    font-weight: bold
+}
+
+.skills .skill .sup {
+    position: absolute;
+    top: 3px;
+    left: 195px;
+    font-size: 30px;
+}
+
+.skills .skill h6 {
+    font-size: 16px;
+    margin: 5px;
+    text-transform: uppercase;
+}
+
+/*end skills*/
+/*start testimonials*/
+.testim {
+    margin: 50px 0;
+    padding: 20px;
+}
+
+.testim .panel {
+    background-color: #212121;
+    padding: 40px 70px;
+    text-align: center;
+    box-shadow: 0 35px 0 -20px #d63447;
+}
+
+.testim .panel span {
+    color: #fff;
+    font-size: 70px;
+}
+
+.testim .panel p {
+    color: #dddd;
+    font-size: 21px;
+    line-height: 1.7;
+}
+
+.testim .info {
+    text-align: center;
+    position: relative;
+    top: -35px;
+}
+
+.testim .info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
+
+.testim .info h5 {
+    margin: 3px;
+    font-size: 17px;
+}
+
+.testim .info span {
+    color: #999;
+}
+
+.testim .controls .pagination {
+    text-align: center;
+}
+
+.testim .controls .pagination span {
+    width: 8px;
+    height: 8px;
+    background-color: #d63447;
+    display: inline-block;
+    border-radius: 100%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.testim .controls .pagination span.active,
+.testim .controls .pagination span:hover {
+    background-color: #ddd;
+}
+
+.testim .controls .arrow {
+    position: relative;
+    top: -15px;
+}
+
+.testim .controls .arrow i {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.testim .controls .arrow .fa-chevron-left {
+    position: absolute;
+    left: 0;
+}
+
+.testim .controls .arrow .fa-chevron-right {
+    position: absolute;
+    right: 0;
+}
+
+/*end testimonials*/
+/*start journal*/
+.journal {
+    margin: 130px 0 50px;
+}
+
+.journal .big {
+    flex: 66.6666%;
+    max-width: 66.66666%;
+    border-left: .5px solid #222;
+    border-right: .5px solid #222;
+    padding: 0 15px;
+}
+
+.journal .big .s-big {
+    flex: 50%;
+    max-width: 50%;
+}
+
+.journal .big .s-big:first-child {
+    padding-right: 15px;
+    border-right: .5px solid #222;
+}
+
+.journal .big .s-big:last-child {
+    padding-left: 15px;
+}
+
+.journal .img-over {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.journal .img-over .over {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: all .3s ease-in-out;
+}
+
+.journal .img-over:hover .over {
+    opacity: 0;
+}
+
+.journal .img-over .over .info {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+}
+
+.journal .small {
+    flex: 33.3333%;
+    max-width: 33.3333%;
+    border-right: .5px solid #222;
+    padding: 0 15px;
+}
+
+.journal .row img {
+    width: 100%;
+    height: 330px;
+}
+
+/*end journal*/
+/*start contact*/
+.contact {
+    margin: 30px;
+    padding-bottom: 50px;
+}
+
+.contact .input {
+    flex: 66.6666%;
+    max-width: 66.6666%;
+    border-left: .5px solid #222;
+    border-right: .5px solid #222;
+    padding: 0 15px;
+}
+
+.contact .input form input {
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 5px;
+    width: 295px;
+    margin: 0 78px 50px 0;
+}
+
+.contact .input form textarea {
+    width: 88%;
+    height: 210px;
+    margin-bottom: 50px;
+    padding: 10px 5px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.contact .input form input::placeholder,
+.contact .input form textarea::placeholder {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    color: #888;
+}
+
+.contact form button {
+    background: none;
+    color: #fff;
+    padding: 16px 25px;
+    border: 1px solid #222;
+    border-radius: 51px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.contact form button:hover {
+    transform: scale(1.05);
+    color: #d63447;
+    border: 1px solid #d63447;
+}
+
+.contact .info {
+    flex: 33.33333%;
+    max-width: 33.3333%;
+    border-right: .5px solid #222;
+}
+
+.contact .info .text {
+    margin-bottom: 70px;
+    padding: 10px 0 0 10px;
+}
+
+.contact .info .text .first,
+.feat {
+    display: block;
+}
+
+.contact .info .text .first {
+    color: #888;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.contact .info .text .feat {
+    color: #fff;
+}
+
+/*end contact*/
+/*start footer*/
+.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+footer {
+    height: 400px;
+    background-color: #191919;
+    text-align: center;
+    padding: 50px 0 30px;
+}
+
+footer .social {
+    margin-bottom: 45px;
+}
+
+footer .social span {
+    margin-right: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #999;
+}
+
+footer p {
+    color: #999;
+
+}
+
+footer p span {
+    font-weight: 900;
+}
+
+/*end footer*/
